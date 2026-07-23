@@ -189,6 +189,54 @@ export default function LandingSections({
                     ))}
                 </div>
             </section>
+
+            <section id="about" data-reveal className="reveal-up grid gap-8 rounded-2xl border border-zinc-800 bg-linear-to-r from-zinc-900 to-zinc-900/40 p-8 md:grid-cols-2">
+                <div>
+                    <h2 className="mb-4 text-2xl font-semibold md:text-3xl">Construído por especialistas em IA, para equipes de produção</h2>
+                    <p className="text-zinc-300">
+                        Somos uma equipe multifuncional de pesquisadores de IA, engenheiros e líderes de produto focados em fornecer inteligência prática na velocidade de uma startup
+                    </p>
+                </div>
+
+                <div className="space-y-4">
+                    {team.map((member) => (
+                        <div key={member.name} className="rounded-lg border border-zinc-700 bg-zinc-950/50 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-400/40">
+                            <p className="font-medium">{member.name}</p>
+                            <p className="text-sm text-zinc-400">{member.role}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section id="faq" data-reveal className="reveal-up rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8">
+                <h2 className="mb-6 text-2xl font-semibold md:text-3xl">Perguntas Frequentes</h2>
+                <div className="space-y-3">
+                    {faqs.map((item, index) => {
+                        const isOpen = openFaq === index
+                        return (
+                            <div key={item.q} className="rounded-lg border border-zinc-700 bg-zinc-950/40 transition-colors duration-300 hover:border-blue-400/40">
+                                <button onClick={() => setOpenFaq(isOpen ? -1 : index)} className="flex w-full items-center justify-between px-4 py-3 text-left transition-colors duration-300 hover:text-blue-200">
+                                    <span className="font-medium">{item.q}</span>
+                                    <span className={`text-blue-300 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>+</span>
+                                </button>
+                                <div className={`faq-content px-4 text-zinc-300 ${isOpen ? 'faq-open pb-4' : ''}`}>
+                                    <p>{item.a}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            </section>
+
+            <section data-reveal className="reveal-up rounded-2xl border border-blue-400/30 bg-blue-500/10 p-8 text-center">
+                <h2 className="mb-4 text-2xl font-semibold md:text-3xl">Pronto para crescer com IA?</h2>
+                <p className="mx-auto mb-6 max-w-2xl text-zinc-200">
+                    Lance seu primeiro fluxo de trabalho de IA em dias, não meses. Junte-se às equipes que usam Synapse para automatizar, prever e crescer mais rápido.
+                </p>
+                <button className="rounded-lg bg-blue-500 px-7 py-3 font-semibold text-white shadow-lg shadow-blue-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400">
+                    Agende Sua Chamada de Estratégia
+                </button>
+            </section>
         </main>
     )
 }

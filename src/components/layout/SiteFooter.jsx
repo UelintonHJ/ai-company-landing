@@ -27,7 +27,7 @@ export default function SiteFooter() {
                         </a>
                     </div>
                 </div>
-                <p className="text-center sm:text-right">© 2026 Uelinton Janke IA. Todos os direitos reservados.</p>
+                <p className="text-center sm:text-right">© 2026 Synapse IA. Todos os direitos reservados.</p>
             </div>
         </footer>
     )
