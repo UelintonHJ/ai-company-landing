@@ -1,4 +1,5 @@
-import { FaEnvelope, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function SiteFooter() {
     return (
@@ -22,8 +23,8 @@ export default function SiteFooter() {
                             LinkedIn
                         </a>
                         <a href="#" className="inline-flex items-center gap-2 hover:text-blue-300">
-                            <FaTwitter />
-                            X
+                            <FaXTwitter />
+                            X / Twitter
                         </a>
                     </div>
                 </div>

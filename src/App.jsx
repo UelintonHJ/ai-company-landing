@@ -8,12 +8,12 @@ import {
   features,
   integrations,
   pricing,
-  services,
-  showcases,
+  service,
+  showcase,
   stats,
   team,
   testimonials,
-  workflowsSteps,
+  workflowSteps,
 } from './data/landingData'
 import { useAutoRotate } from './hooks/useAutoRotate'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
@@ -29,7 +29,7 @@ function App() {
   useRevealOnScroll()
   const { isScrolled, showTopButton } = useScrollState()
   useAutoRotate(setActiveTestimonial, testimonials.length, 4500)
-  useAutoRotate(setActiveShowcase, showcases.length, 3600)
+  useAutoRotate(setActiveShowcase, showcase.length, 3600)
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-black text-zinc-100">
@@ -40,7 +40,7 @@ function App() {
       <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
         <SiteHeader isScrolled={isScrolled} menuOpen={menuOpen} onToggleMenu={() => setMenuOpen((prev) => !prev)} onCloseMenu={() => setMenuOpen(false)} />
 
-        <LandingSections stats={stats} workflowSteps={workflowsSteps} services={services} showcases={showcases} activeShowcase={activeShowcase} setActiveShowcase={setActiveShowcase} features={features} testimonials={testimonials} activeTestimonial={activeTestimonial} setActiveTestimonial={setActiveTestimonial} integrations={integrations} princing={pricing} annualBilling={annualBilling} setAnnualBilling={setAnnualBilling} team={team} faqs={faqs} openFaq={openFaq} setOpenFaq={setOpenFaq} />
+        <LandingSections stats={stats} workflowSteps={workflowSteps} services={service} showcases={showcase} activeShowcase={activeShowcase} setActiveShowcase={setActiveShowcase} features={features} testimonials={testimonials} activeTestimonial={activeTestimonial} setActiveTestimonial={setActiveTestimonial} integrations={integrations} pricing={pricing} annualBilling={annualBilling} setAnnualBilling={setAnnualBilling} team={team} faqs={faqs} openFaq={openFaq} setOpenFaq={setOpenFaq} />
 
         <SiteFooter />
       </div>

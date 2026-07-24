@@ -1,4 +1,5 @@
-import { FaBars, FaBrain, FaEnvelope } from "react-icons/fa";
+import { FaBars, FaEnvelope } from "react-icons/fa";
+import { GiBrain } from "react-icons/gi";
 
 export default function SiteHeader({ isScrolled, menuOpen, onToggleMenu, onCloseMenu }) {
     return (
@@ -6,7 +7,7 @@ export default function SiteHeader({ isScrolled, menuOpen, onToggleMenu, onClose
             <header className={`fixed left-1/2 top-0 z-50 mt-3 flex w-[min(95%,72rem)] -translate-x-1/2 items-center justify-between rounded-2xl border px-4 py-3 backdrop-blur-xl transition-all duration-300 ${isScrolled ? 'border-blue-400/30 bg-black/85 shadow-xl shadow-blue-500/10' : 'border-zinc-800/80 bg-zinc-900/70 hover:border-zinc-700'}`}>
                 <div className="flex items-center gap-3">
                     <div className="flex h-9 w-9 items-center justify-center rounded-sm bg-linear-to-br from-blue-500 to-blue-700 shadow-lg shadow-blue-500/20">
-                        <FaBrain className="text-white" />
+                        <GiBrain className="text-white text-2xl" />
                     </div>
                     <span className="text-lg font-semibold tracking-wide">Synapse IA</span>
                 </div>

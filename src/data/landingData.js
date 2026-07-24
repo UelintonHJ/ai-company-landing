@@ -16,10 +16,10 @@ import {
 } from 'react-icons/fa'
 
 export const stats = [
-    { label: 'Models Deployed', value: '280+' },
-    { label: 'Avg. Automation Gain', value: '127%' },
-    { label: 'Enterprise Uptime', value: '99.99%' },
-    { label: 'Global Clients', value: '42' },
+    { label: 'Modelos Implantados', value: '+280' },
+    { label: 'Ganhos Médios com Automação', value: '127%' },
+    { label: 'Tempo de Atividade da Empresa', value: '99.99%' },
+    { label: 'Clientes Globais', value: '42' },
 ]
 
 export const features = [
@@ -114,13 +114,13 @@ export const integrations = [
 export const testimonials = [
     {
         quote:
-            'Synapse nos ajudou a lançar um assistente de suporte de IA em duas semanas e reduziu o tempo de resposta em 63%.',
+            'A Synapse nos ajudou a lançar um assistente de suporte de IA em duas semanas e reduziu o tempo de resposta em 63%.',
         author: 'Mariana Albuquerque',
         role: 'VP Product, Atlas Group',
     },
     {
         quote:
-            'O motor preditivo mostrou oportunidades de receita que nunca tínhamos capturado com nossa stack anterior.',
+            'O motor de previsão mostrou oportunidades de receita que nunca tínhamos capturado com nossa stack anterior.',
         author: 'Fernando Azevedo',
         role: 'COO, Nexora',
     },
@@ -136,14 +136,14 @@ export const pricing = [
     {
         tier: 'Starter',
         monthly: 'R$ 500',
-        annual: 'R$ 4.800',
+        annual: 'R$ 480',
         description: 'Para equipes em estágio inicial validando fluxos de trabalho de IA.',
         features: ['1 fluxo de trabalho com IA', 'Análises básicas', 'Suporte por e-mail'],
     },
     {
         tier: 'Growth',
         monthly: 'R$ 1.500',
-        annual: 'R$ 14.400',
+        annual: 'R$ 1.280',
         description: 'Para escalar equipes que entregam produtos com inteligência artificial.',
         features: ['Fluxos de trabalho ilimitadas', 'Análises avançadas', 'Suporte prioritário'],
         popular: true,
@@ -164,11 +164,11 @@ export const faqs = [
     },
     {
         q: 'A plataforma oferece suporte para implantação em infraestrutura privada ou local?',
-        a: 'Sim. Os planos Professional e Enterprise oferecem suporte para implantação em nuvem privada, VPCs e ambientes híbridos, atendendo aos requisitos de segurança, conformidade e governança da sua organização.',
+        a: 'Sim. O plano Enterprise oferece suporte para implantação em nuvem privada, VPCs e ambientes híbridos, atendendo aos requisitos de segurança, conformidade e governança da sua organização.',
     },
     {
         q: 'Podemos conectar nossas ferramentas e fontes de dados existentes?',
-        a: 'Sim. Oferecemos integrações nativas com CRMs, data warehouses, ferramentas de atendimento e APIs personalizadas, permitindo conectar seus sistemas existentes de forma rápida e segura.',
+        a: 'Com certeza. Oferecemos integrações nativas com CRMs, data warehouses, ferramentas de atendimento e APIs personalizadas, permitindo conectar seus sistemas existentes de forma rápida e segura.',
     }
 ]
 

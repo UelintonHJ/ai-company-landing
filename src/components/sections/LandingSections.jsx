@@ -31,7 +31,7 @@ export default function LandingSections({
                         Crie produtos mais inteligentes com IA que entregam valor desde o primeiro dia.
                     </h1>
                     <p className="mb-8 max-w-xl text-lg text-zinc-300">
-                        Ajudamos startups e empresas a lançar produtos de IA confiáveis com rapidez, segurança e impacto real nos negócios.
+                        Ajudamos startups e empresas através da IA a lançar seus produtos com confiança, rapidez, segurança e gerando impacto real nos seus negócios.
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
                         <button className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 hover:bg-blue-400">
@@ -42,7 +42,7 @@ export default function LandingSections({
                         </button>
                     </div>
 
-                    <div className="mt-8 grid-cols-2 gap-4 sm:grid-cols-4">
+                    <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
                         {stats.map((item) => (
                             <div key={item.label} className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-3 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40">
                                 <p className="text-xl font-bold text-blue-300">{item.value}</p>
@@ -53,22 +53,21 @@ export default function LandingSections({
                 </div>
 
                 <div className="relative rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 shadow-2xl shadow-blue-500/10">
-                    <div className="absolute -inset-0.5 -z-10 rounded-2xl bg-linear-to-r from-blue-500/15 to-white/10 blur-md">
-                        <div className="mb-6 flex items-center justify-between">
-                            <h2 className="text-lg font-semibold">Operações com IA</h2>
-                            <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs text-emerald-300">
-                                +127% de Produtividade
-                            </span>
-                        </div>
+                    <div className="absolute -inset-0.5 -z-10 rounded-2xl bg-linear-to-r from-blue-500/15 to-white/10 blur-md" />
+                    <div className="mb-6 flex items-center justify-between">
+                        <h2 className="text-lg font-semibold">Operações com IA</h2>
+                        <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs text-emerald-300">
+                            +127% de Produtividade
+                        </span>
+                    </div>
 
-                        <div className="space-y-4">
-                            {['Customer Support', 'Sales Enablement', 'Data Processing'].map((item) => (
-                                <div key={item} className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-950/70 px-4 py-3 transition-all duration-300 hover:border-blue-400/40 hover:bg-zinc-900">
-                                    <span className="text-zinc-200">{item}</span>
-                                    <span className="text-sm text-blue-300">IA Ativa</span>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="space-y-4">
+                        {['Suporte ao Cliente', 'Apoio a Vendas', 'Processamento de Dados'].map((item) => (
+                            <div key={item} className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-950/70 px-4 py-3 transition-all duration-300 hover:border-blue-400/40 hover:bg-zinc-900">
+                                <span className="text-zinc-200">{item}</span>
+                                <span className="text-sm text-blue-300">IA Ativa</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -100,7 +99,7 @@ export default function LandingSections({
                 <div className="grid gap-6 md:grid-cols-3">
                     {features.map((feature) => (
                         <article key={feature.title} className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10">
-                            <feature.ico className="mb-3 text-xl text-blue-300" />
+                            <feature.icon className="mb-3 text-xl text-blue-300" />
                             <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
                             <p className="text-zinc-300">{feature.description}</p>
                         </article>
@@ -112,10 +111,10 @@ export default function LandingSections({
                 <div className="mb-6 flex items-center justify-between gap-3">
                     <h2 className="text-2xl font-semibold md:text-3xl">O que dizem os clientes</h2>
                     <div className="flex gap-2">
-                        <button onClick={setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)} className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400" aria-label="Volte o comentário">
+                        <button onClick={() => setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)} className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400" aria-label="Volte o comentário anterior">
                             <FaArrowLeft />
                         </button>
-                        <button onClick={setActiveTestimonial((prev) => (prev + 1) % testimonials.length)} className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400" aria-label="Próximo comentário">
+                        <button onClick={() => setActiveTestimonial((prev) => (prev + 1) % testimonials.length)} className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400" aria-label="Próximo comentário">
                             <FaArrowRight />
                         </button>
                     </div>
@@ -135,7 +134,7 @@ export default function LandingSections({
 
                 <div className="mt-4 flex justify-center gap-2">
                     {testimonials.map((item, index) => (
-                        <button key={item.author} onClick={() => setActiveTestimonial(index)} className={`h-2.5 rounded-full transition-all ${setActiveTestimonial === index ? 'w-8 bg-blue-300' : 'w-2.5 bg-zinc-600'}`} />
+                        <button key={item.author} onClick={() => setActiveTestimonial(index)} className={`h-2.5 rounded-full transition-all ${activeTestimonial === index ? 'w-8 bg-blue-300' : 'w-2.5 bg-zinc-600'}`} />
                     ))}
                 </div>
             </section>
@@ -145,7 +144,7 @@ export default function LandingSections({
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
                     {integrations.map((item) => (
                         <div key={item.name} className="rounded-lg border border-zinc-800 bg-zinc-950/50 px-4 py-3 text-center text-sm font-medium text-zinc-200 transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/40">
-                            <item.ico className="mx-auto mb-2 text-base text-blue-300" />
+                            <item.icon className="mx-auto mb-2 text-base text-blue-300" />
                             {item.name}
                         </div>
                     ))}
@@ -231,10 +230,10 @@ export default function LandingSections({
             <section data-reveal className="reveal-up rounded-2xl border border-blue-400/30 bg-blue-500/10 p-8 text-center">
                 <h2 className="mb-4 text-2xl font-semibold md:text-3xl">Pronto para crescer com IA?</h2>
                 <p className="mx-auto mb-6 max-w-2xl text-zinc-200">
-                    Lance seu primeiro fluxo de trabalho de IA em dias, não meses. Junte-se às equipes que usam Synapse para automatizar, prever e crescer mais rápido.
+                    Lance seu primeiro fluxo de trabalho em dias, não meses. Junte-se às equipes que usam Synapse para automatizar, prever e crescer mais rápido.
                 </p>
                 <button className="rounded-lg bg-blue-500 px-7 py-3 font-semibold text-white shadow-lg shadow-blue-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400">
-                    Agende Sua Chamada de Estratégia
+                    Fale conosco
                 </button>
             </section>
         </main>
