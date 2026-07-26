@@ -17,8 +17,8 @@ import {
 
 export const stats = [
     { label: 'Modelos Implantados', value: '+280' },
-    { label: 'Ganhos Médios com Automação', value: '127%' },
-    { label: 'Tempo de Atividade da Empresa', value: '99.99%' },
+    { label: 'Ganhos Médios', value: '127%' },
+    { label: 'Uptime', value: '99.99%' },
     { label: 'Clientes Globais', value: '42' },
 ]
 
@@ -114,19 +114,19 @@ export const integrations = [
 export const testimonials = [
     {
         quote:
-            'A Synapse nos ajudou a lançar um assistente de suporte de IA em duas semanas e reduziu o tempo de resposta em 63%.',
+            '"A Synapse nos ajudou a lançar um assistente de suporte de IA em duas semanas e reduziu o tempo de resposta em 63%."',
         author: 'Mariana Albuquerque',
         role: 'VP Product, Atlas Group',
     },
     {
         quote:
-            'O motor de previsão mostrou oportunidades de receita que nunca tínhamos capturado com nossa stack anterior.',
+            '"O motor de previsão mostrou oportunidades de receita que nunca tínhamos capturado com nossa stack anterior."',
         author: 'Fernando Azevedo',
         role: 'COO, Nexora',
     },
     {
         quote:
-            'O time deles parece uma extensão do nosso - estratégico, ágil e muito técnico.',
+            '"O time deles parece uma extensão do nosso - estratégico, ágil e muito técnico."',
         author: 'Renata Duarte',
         role: 'Head of Ops, Vertex',
     },
@@ -137,38 +137,38 @@ export const pricing = [
         tier: 'Starter',
         monthly: 'R$ 500',
         annual: 'R$ 480',
-        description: 'Para equipes em estágio inicial validando fluxos de trabalho de IA.',
-        features: ['1 fluxo de trabalho com IA', 'Análises básicas', 'Suporte por e-mail'],
+        description: 'Para equipes em estágio inicial que querem validar seus workflows com IA.',
+        features: ['1 workflow com IA', 'Análises básicas', 'Suporte por e-mail'],
     },
     {
         tier: 'Growth',
         monthly: 'R$ 1.500',
         annual: 'R$ 1.280',
-        description: 'Para escalar equipes que entregam produtos com inteligência artificial.',
-        features: ['Fluxos de trabalho ilimitadas', 'Análises avançadas', 'Suporte prioritário'],
+        description: 'Para escalar equipes que querem entregar produtos com IA.',
+        features: ['Workflows ilimitados', 'Análises avançadas', 'Suporte prioritário'],
         popular: true,
     },
     {
         tier: 'Enterprise',
         monthly: 'Sob consulta',
         annual: 'Sob consulta',
-        description: 'IA essencial para escala corporativa.',
+        description: 'Inteligência Artificial em escala corporativa.',
         features: ['Implantação privada', 'SSO + compliance', 'Arquiteto de IA dedicado'],
     },
 ]
 
 export const faqs = [
     {
-        q: 'Quanto tempo leva para implementar meu primeiro fluxo de automação com IA?',
-        a: 'A maioria das equipes implementa seu primeiro fluxo de trabalho com IA em 7 a 14 dias utilizando nosso onboarding guiado, templates prontos e suporte especializado.',
+        q: 'Quanto tempo leva para implementar meu primeiro workflow com IA?',
+        a: 'A maioria das equipes implementa seu primeiro workflow com IA de 7 a 14 dias utilizando nosso onboarding guiado, templates prontos e suporte especializado.',
     },
     {
         q: 'A plataforma oferece suporte para implantação em infraestrutura privada ou local?',
-        a: 'Sim. O plano Enterprise oferece suporte para implantação em nuvem privada, VPCs e ambientes híbridos, atendendo aos requisitos de segurança, conformidade e governança da sua organização.',
+        a: 'O plano Enterprise oferece suporte para implantação em nuvem privada, VPCs e ambientes híbridos, atendendo aos requisitos de segurança, conformidade e governança da sua organização.',
     },
     {
         q: 'Podemos conectar nossas ferramentas e fontes de dados existentes?',
-        a: 'Com certeza. Oferecemos integrações nativas com CRMs, data warehouses, ferramentas de atendimento e APIs personalizadas, permitindo conectar seus sistemas existentes de forma rápida e segura.',
+        a: 'Nós oferecemos integrações nativas com CRMs, data warehouses, ferramentas de atendimento e APIs personalizadas, permitindo conectar seus sistemas existentes de forma rápida e segura.',
     }
 ]
 
