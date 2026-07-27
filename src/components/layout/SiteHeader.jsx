@@ -2,7 +2,7 @@ import { FaBars, FaEnvelope } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
 
 const navigation = [
-    { label: "Recursos", href: "#features" },
+    { label: "Recursos", href: "#services" },
     { label: "Preços", href: "#pricing" },
     { label: "Sobre", href: "#about" },
     { label: "FAQ", href: "#faq" },

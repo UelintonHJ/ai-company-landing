@@ -46,12 +46,12 @@ export const features = [
 export const service = [
     {
         icon: FaRobot,
-        name: 'API de Assistente Inteligente',
+        name: 'API para Assistência Inteligente',
         summary: 'Conecte uma IA conversacional para apoiar as equipes e as experiências com clientes.',
     },
     {
         icon: FaBrain,
-        name: 'Copiloto para o Fluxo de Trabalho',
+        name: 'Copiloto para o Workflow',
         summary: 'Aumente operações com sugestões conscientes do contexto e automação com um clique.'
     },
     {
