@@ -115,19 +115,19 @@ export const integrations = [
 export const testimonials = [
     {
         quote:
-            '"A Synapse nos ajudou a lançar um assistente de suporte de IA em duas semanas e reduziu o tempo de resposta em 63%."',
+            'A Synapse nos ajudou a lançar um assistente de suporte de IA em duas semanas e reduziu o tempo de resposta em 63%.',
         author: 'Mariana Albuquerque',
         role: 'VP Product, Atlas Group',
     },
     {
         quote:
-            '"O motor de previsão mostrou oportunidades de receita que nunca tínhamos capturado com nossa stack anterior."',
+            'O motor de previsão mostrou oportunidades de receita que nunca tínhamos capturado com nossa stack anterior.',
         author: 'Fernando Azevedo',
         role: 'COO, Nexora',
     },
     {
         quote:
-            '"O time deles parece uma extensão do nosso - estratégico, ágil e muito técnico."',
+            'O time deles parece uma extensão do nosso - estratégico, ágil e muito técnico.',
         author: 'Renata Duarte',
         role: 'Head of Ops, Vertex',
     },

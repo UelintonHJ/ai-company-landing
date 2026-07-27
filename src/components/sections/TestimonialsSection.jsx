@@ -57,7 +57,7 @@ export default function TestimonialsSection({
                             className="flex min-h-15 min-w-full flex-col rounded-xl border border-zinc-800 bg-zinc-950/50 p-8"
                         >
                             <p className="flex-1 mb-6 text-xl leading-relaxed text-zinc-200">
-                                {item.quote}
+                                "{item.quote}"
                             </p>
 
                             <p className="font-medium text-blue-300">
