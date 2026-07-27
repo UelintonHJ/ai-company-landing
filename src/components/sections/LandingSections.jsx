@@ -1,5 +1,6 @@
 import HeroSection from './HeroSection';
 import ServicesSection from './ServicesSection';
+import ShowcaseSection from './ShowcaseSection';
 import PartnersSection from './PartnersSection';
 import WorkflowSection from './WorkflowSection';
 import FeaturesSection from './FeaturesSection';
@@ -41,6 +42,12 @@ export default function LandingSections({
             />
 
             <ServicesSection services={services} />
+
+            <ShowcaseSection
+                showcases={showcases}
+                activeShowcase={activeShowcase}
+                setActiveShowcase={setActiveShowcase}
+            />
 
             <PartnersSection />
 

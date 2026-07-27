@@ -9,6 +9,7 @@ import {
     FaMicrosoft,
     FaRegFileAlt,
     FaRobot,
+    FaCode,
     FaSalesforce,
     FaSlack,
     FaSnowflake,
@@ -65,13 +66,13 @@ export const showcase = [
     {
         icon: FaCloud,
         title: 'Centro de Comando',
-        description: 'Monitore todos os fluxos de trabalho de IA, alertas e a saúde do sistema em um único painel em tempo real.',
+        description: 'Monitore todos os workflows, alertas e a saúde do sistema em um único painel em tempo real.',
         metric: '98.2% de precisão',
     },
     {
-        icon: FaRobot,
+        icon: FaCode,
         title: 'Estúdio de Automação',
-        description: 'Crie automações de IA sem código com gatilhos, roteamento e ciclos de aprovação.',
+        description: 'Crie automações de IA sem código com triggers, roteamentos e ciclos de aprovação.',
         metric: 'Configuração 3.4x mais rápida',
     },
     {
