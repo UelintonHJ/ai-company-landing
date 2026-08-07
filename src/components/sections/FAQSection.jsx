@@ -1,8 +1,8 @@
-export default function FAQSection({
-    faqs,
-    openFaq,
-    setOpenFaq,
-}) {
+import { useState } from "react";
+
+export default function FAQSection({ faqs }) {
+    const [openFaq, setOpenFaq] = useState(0);
+
     return (
         <section
             id="faq"
@@ -23,10 +23,12 @@ export default function FAQSection({
                             className="rounded-lg border border-zinc-700 bg-zinc-950/40 transition-colors duration-300 hover:border-blue-400/40"
                         >
                             <button
+                                type="button"
                                 onClick={() => 
                                     setOpenFaq(isOpen ? -1 : index)
                                 }
                                 className="flex w-full items-center justify-between px-4 py-3 text-left transition-colors duration-300 hover:text-blue-200"
+                                aria-expanded={isOpen}
                             >
                                 <span className="font-medium">
                                     {item.q}
@@ -36,6 +38,7 @@ export default function FAQSection({
                                     className={`text-blue-300 transition-transform duration-300 ${
                                         isOpen ? "rotate-180" : ""
                                     }`}
+                                    aria-hidden="true"
                                 >
                                     +
                                 </span>

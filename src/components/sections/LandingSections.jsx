@@ -22,8 +22,6 @@ export default function LandingSections({
     pricing,
     team,
     faqs,
-    openFaq,
-    setOpenFaq
 }) {
     return (
         <main className="space-y-24">
@@ -51,11 +49,7 @@ export default function LandingSections({
 
             <AboutSection team={team} />
 
-            <FAQSection 
-                faqs={faqs}
-                openFaq={openFaq}
-                setOpenFaq={setOpenFaq}
-            />
+            <FAQSection faqs={faqs} />
 
             <CTASection />
         </main>

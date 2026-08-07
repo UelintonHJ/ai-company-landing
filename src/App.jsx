@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import BackToTopButton from "./components/common/BackToTopButton";
 import SiteFooter from "./components/layout/SiteFooter";
 import SiteHeader from "./components/layout/SiteHeader";
@@ -22,8 +20,6 @@ import { useRevealOnScroll } from "./hooks/useRevealOnScroll";
 import { useScrollState } from "./hooks/useScrollState";
 
 function App() {
-  const [openFaq, setOpenFaq] = useState(0);
-
   useRevealOnScroll()
 
   const { isScrolled, showTopButton } = useScrollState();
@@ -49,8 +45,6 @@ function App() {
           pricing={pricing} 
           team={team} 
           faqs={faqs} 
-          openFaq={openFaq} 
-          setOpenFaq={setOpenFaq} 
         />
 
         <SiteFooter />
