@@ -1,8 +1,12 @@
-export default function ShowcaseSection({
-    showcases,
-    activeShowcase,
-    setActiveShowcase,
-}) {
+import { useState } from "react";
+
+import { useAutoRotate } from "../../hooks/useAutoRotate";
+
+export default function ShowcaseSection({ showcases }) {
+    const [activeShowcase, setActiveShowcase] = useState(0);
+
+    useAutoRotate(setActiveShowcase, showcases.length, 3600);
+
     const showcase = showcases[activeShowcase];
 
     return (
@@ -26,6 +30,7 @@ export default function ShowcaseSection({
                     {showcases.map((item, index) => (
                         <button
                             key={item.title}
+                            type="button"
                             onClick={() => setActiveShowcase(index)}
                             className={`group flex h-16 shrink-0 items-center justify-center rounded-xl border p-4 transition-all duration-300 md:gap-2 lg:min-h-28 lg:w-full lg:justify-start lg:gap-4 ${
                                 activeShowcase === index
@@ -34,7 +39,7 @@ export default function ShowcaseSection({
                                 }`}
                         >
                             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-300">
-                                <item.icon className="text-xl" />
+                                <item.icon className="text-xl" aria-hidden="true" />
                             </div>
 
                             <h3 className="hidden font-semibold md:text-sm md:block lg:text-base">
@@ -47,7 +52,7 @@ export default function ShowcaseSection({
                 <article className="flex min-h-100 md:min-h-80 lg:h-auto flex-col justify-between overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
                     <div>
                         <div className="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-300">
-                            <showcase.icon className="text-3xl" />
+                            <showcase.icon className="text-3xl" aria-hidden="true" />
                         </div>
 
                         <h3 className="mb-3 text-2xl font-bold">

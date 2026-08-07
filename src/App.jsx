@@ -26,14 +26,12 @@ function App() {
   const [annualBilling, setAnnualBilling] = useState(true);
   const [openFaq, setOpenFaq] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const [activeShowcase, setActiveShowcase] = useState(0);
 
   useRevealOnScroll()
 
   const { isScrolled, showTopButton } = useScrollState();
 
   useAutoRotate(setActiveTestimonial, testimonials.length, 4500);
-  useAutoRotate(setActiveShowcase, showcase.length, 3600);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-black text-zinc-100">
@@ -50,8 +48,6 @@ function App() {
           workflowSteps={workflowSteps} 
           services={service} 
           showcases={showcase} 
-          activeShowcase={activeShowcase} 
-          setActiveShowcase={setActiveShowcase} 
           features={features} 
           testimonials={testimonials} 
           activeTestimonial={activeTestimonial} 

@@ -16,8 +16,6 @@ export default function LandingSections({
     workflowSteps,
     services,
     showcases,
-    activeShowcase,
-    setActiveShowcase,
     features,
     testimonials,
     activeTestimonial,
@@ -37,17 +35,11 @@ export default function LandingSections({
                 stats={stats}
                 services={services}
                 showcases={showcases}
-                activeShowcase={activeShowcase}
-                setActiveShowcase={setActiveShowcase}
             />
 
             <ServicesSection services={services} />
 
-            <ShowcaseSection
-                showcases={showcases}
-                activeShowcase={activeShowcase}
-                setActiveShowcase={setActiveShowcase}
-            />
+            <ShowcaseSection showcases={showcases} />
 
             <PartnersSection />
 
