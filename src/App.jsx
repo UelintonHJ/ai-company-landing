@@ -25,7 +25,6 @@ import { useScrollState } from "./hooks/useScrollState";
 function App() {
   const [annualBilling, setAnnualBilling] = useState(true);
   const [openFaq, setOpenFaq] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeShowcase, setActiveShowcase] = useState(0);
 
@@ -36,14 +35,6 @@ function App() {
   useAutoRotate(setActiveTestimonial, testimonials.length, 4500);
   useAutoRotate(setActiveShowcase, showcase.length, 3600);
 
-  const handleToggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
-
-  const handleCloseMenu = () => {
-    setMenuOpen(false);
-  };
-
   return (
     <div className="relative min-h-screen overflow-hidden bg-black text-zinc-100">
       <div className="glow glow-cyan" />
@@ -52,11 +43,7 @@ function App() {
 
       <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
         <SiteHeader 
-          isScrolled={isScrolled} 
-          menuOpen={menuOpen} 
-          onToggleMenu={handleToggleMenu} 
-          onCloseMenu={handleCloseMenu} 
-        />
+          isScrolled={isScrolled} />
 
         <LandingSections 
           stats={stats} 

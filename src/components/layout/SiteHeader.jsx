@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaBars, FaEnvelope } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
 
@@ -8,12 +9,17 @@ const navigation = [
     { label: "FAQ", href: "#faq" },
 ];
 
-export default function SiteHeader({
-    isScrolled,
-    menuOpen,
-    onToggleMenu,
-    onCloseMenu
-}) {
+export default function SiteHeader({ isScrolled }) {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleToggleMenu = () => {
+        setMenuOpen((prev) => !prev);
+    };
+
+    const handleCloseMenu = () => {
+        setMenuOpen(false);
+    };
+
     const navLinkClasses =
         "relative transition-colors duration-200 hover:text-blue-300 focus-visible:outline-none focus-visible:text-blue-300";
 
@@ -65,7 +71,7 @@ export default function SiteHeader({
 
                 <button
                     type="button"
-                    onClick={onToggleMenu}
+                    onClick={handleToggleMenu}
                     aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
                     aria-expanded={menuOpen}
                     aria-controls="mobile-menu"
@@ -98,7 +104,7 @@ export default function SiteHeader({
                         <a
                             key={href}
                             href={href}
-                            onClick={onCloseMenu}
+                            onClick={handleCloseMenu}
                             className={navLinkClasses}
                         >
                             {label}
@@ -107,7 +113,7 @@ export default function SiteHeader({
 
                     <button
                         type="button"
-                        onClick={onCloseMenu}
+                        onClick={handleCloseMenu}
                         className={mobileButtonClasses}
                     >
                         <FaEnvelope aria-hidden="true" />
