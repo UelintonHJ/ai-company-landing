@@ -1,10 +1,9 @@
+import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-export default function PricingSection({
-    pricing,
-    annualBilling,
-    setAnnualBilling,
-}) {
+export default function PricingSection({ pricing }) {
+    const [annualBilling, setAnnualBilling] = useState(true);
+
     return (
         <section
             id="pricing"
@@ -18,16 +17,20 @@ export default function PricingSection({
 
                 <div className="mx-auto rounded-lg border border-zinc-700 p-1 text-sm md:mx-0">
                     <button
+                        type="button"
                         onClick={() => setAnnualBilling(false)}
-                        className={`rounded-md px-4 py-2 transition-all duration-300 ${annualBilling
+                        className={`rounded-md px-4 py-2 transition-all duration-300 ${
+                            annualBilling
                                 ? "text-zinc-400"
                                 : "bg-zinc-100 text-zinc-900"
                             }`}
+                            aria-pressed={!annualBilling}
                     >
                         Mensal
                     </button>
 
                     <button
+                        type="button"
                         onClick={() => setAnnualBilling(true)}
                         className={`rounded-md px-4 py-2 transition-all duration-300 ${annualBilling
                                 ? "bg-zinc-400 text-white"
@@ -73,13 +76,13 @@ export default function PricingSection({
                                     key={feature}
                                     className="flex items-center gap-2"
                                 >
-                                    <FaCheckCircle className="mt-0.5 text-blue-300" />
+                                    <FaCheckCircle className="mt-0.5 text-blue-300" aria-hidden="true" />
                                     <span>{feature}</span>
                                 </li>
                             ))}
                         </ul>
 
-                        <button className="mt-auto w-full rounded-lg border border-zinc-600 px-4 py-2 font-medium transition hover:border-blue-400 hover:text-blue-300">
+                        <button type="button" className="mt-auto w-full rounded-lg border border-zinc-600 px-4 py-2 font-medium transition hover:border-blue-400 hover:text-blue-300">
                             Comece
                         </button>
                     </article>

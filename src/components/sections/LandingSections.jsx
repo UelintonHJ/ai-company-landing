@@ -20,8 +20,6 @@ export default function LandingSections({
     testimonials,
     integrations,
     pricing,
-    annualBilling,
-    setAnnualBilling,
     team,
     faqs,
     openFaq,
@@ -49,11 +47,7 @@ export default function LandingSections({
 
             <IntegrationsSection integrations={integrations} />
 
-            <PricingSection 
-                pricing={pricing}
-                annualBilling={annualBilling}
-                setAnnualBilling={setAnnualBilling}
-            />
+            <PricingSection pricing={pricing} />
 
             <AboutSection team={team} />
 

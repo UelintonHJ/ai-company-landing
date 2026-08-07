@@ -22,7 +22,6 @@ import { useRevealOnScroll } from "./hooks/useRevealOnScroll";
 import { useScrollState } from "./hooks/useScrollState";
 
 function App() {
-  const [annualBilling, setAnnualBilling] = useState(true);
   const [openFaq, setOpenFaq] = useState(0);
 
   useRevealOnScroll()
@@ -48,8 +47,6 @@ function App() {
           testimonials={testimonials} 
           integrations={integrations} 
           pricing={pricing} 
-          annualBilling={annualBilling} 
-          setAnnualBilling={setAnnualBilling} 
           team={team} 
           faqs={faqs} 
           openFaq={openFaq} 
