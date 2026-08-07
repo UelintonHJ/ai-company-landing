@@ -46,7 +46,7 @@ export default function TestimonialsSection({
 
             <div className="overflow-hidden">
                 <div
-                    className="flex transition-transform duration-700 esse-out"
+                    className="flex transition-transform duration-700 ease-out"
                     style={{
                         transform: `translateX(-${activeTestimonial * 100}%)`,
                     }}
