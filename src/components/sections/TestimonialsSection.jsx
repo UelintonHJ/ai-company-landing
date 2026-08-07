@@ -1,10 +1,13 @@
+import { useState } from "react"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-export default function TestimonialsSection({
-    testimonials,
-    activeTestimonial,
-    setActiveTestimonial,
-}) {
+import { useAutoRotate } from "../../hooks/useAutoRotate";
+
+export default function TestimonialsSection({ testimonials }) {
+    const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+    useAutoRotate(setActiveTestimonial, testimonials.length, 4500);
+
     return (
         <section
             data-reveal
@@ -27,7 +30,7 @@ export default function TestimonialsSection({
                         className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400"
                         aria-label="Voltar depoimento"
                     >
-                        <FaArrowLeft />
+                        <FaArrowLeft aria-hidden="true" />
                     </button>
 
                     <button
@@ -39,7 +42,7 @@ export default function TestimonialsSection({
                         className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400"
                         aria-label="Próximo depoimento"
                     >
-                        <FaArrowRight />
+                        <FaArrowRight aria-hidden="true" />
                     </button>
                 </div>
             </div>

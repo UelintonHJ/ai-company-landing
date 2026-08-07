@@ -18,8 +18,6 @@ export default function LandingSections({
     showcases,
     features,
     testimonials,
-    activeTestimonial,
-    setActiveTestimonial,
     integrations,
     pricing,
     annualBilling,
@@ -47,11 +45,7 @@ export default function LandingSections({
 
             <FeaturesSection features={features} />
 
-            <TestimonialsSection 
-                testimonials={testimonials}
-                activeTestimonial={activeTestimonial}
-                setActiveTestimonial={setActiveTestimonial}
-            />
+            <TestimonialsSection testimonials={testimonials} />
 
             <IntegrationsSection integrations={integrations} />
 

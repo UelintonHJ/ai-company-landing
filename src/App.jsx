@@ -18,20 +18,16 @@ import {
   workflowSteps,
 } from "./data/landingData";
 
-import { useAutoRotate } from "./hooks/useAutoRotate";
 import { useRevealOnScroll } from "./hooks/useRevealOnScroll";
 import { useScrollState } from "./hooks/useScrollState";
 
 function App() {
   const [annualBilling, setAnnualBilling] = useState(true);
   const [openFaq, setOpenFaq] = useState(0);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   useRevealOnScroll()
 
   const { isScrolled, showTopButton } = useScrollState();
-
-  useAutoRotate(setActiveTestimonial, testimonials.length, 4500);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-black text-zinc-100">
@@ -50,8 +46,6 @@ function App() {
           showcases={showcase} 
           features={features} 
           testimonials={testimonials} 
-          activeTestimonial={activeTestimonial} 
-          setActiveTestimonial={setActiveTestimonial} 
           integrations={integrations} 
           pricing={pricing} 
           annualBilling={annualBilling} 
