@@ -1,12 +1,6 @@
-export default function PartnersSection() {
-    const partners = [
-        'Nexora',
-        'Aurora',
-        'VitaCare',
-        'SwiftCargo',
-        'Atlas Group',
-    ]
+import { partners } from "../../data/landingData";
 
+export default function PartnersSection() {
     return (
         <section data-reveal className="reveal-up">
             <div className="mb-6 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400">

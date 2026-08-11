@@ -23,6 +23,14 @@ export const stats = [
     { label: 'Clientes Globais', value: '42' },
 ]
 
+export const partners = [
+    'Nexora',
+    'Aurora',
+    'VitaCare',
+    'SwiftCargo',
+    'Atlas Group',
+]
+
 export const features = [
     {
         icon: FaBolt,
