@@ -20,6 +20,7 @@ export default function TestimonialsSection() {
 
                 <div className="flex gap-2">
                     <button
+                        type="button"
                         onClick={() =>
                             setActiveTestimonial(
                                 (prev) =>
@@ -34,6 +35,7 @@ export default function TestimonialsSection() {
                     </button>
 
                     <button
+                        type="button"
                         onClick={() =>
                             setActiveTestimonial(
                                 (prev) => (prev + 1) % testimonials.length
@@ -78,6 +80,7 @@ export default function TestimonialsSection() {
             <div>
                 {testimonials.map((item, index) => (
                     <button 
+                        type="button"
                         key={item.author}
                         onClick={() => setActiveTestimonial(index)}
                         className={`h-2.5 mr-1 rounded-full transition-all ${

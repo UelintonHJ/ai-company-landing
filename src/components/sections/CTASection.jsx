@@ -13,7 +13,10 @@ export default function CTASection() {
                 Junte-se às grandes empresas que usam Synapse para automatizar, prever e crescer mais rápido.
             </p>
 
-            <button className="rounded-lg bg-blue-500 px-7 py-3 font-semibold text-white shadow-lg shadow-blue-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400">
+            <button
+                type="button" 
+                className="rounded-lg bg-blue-500 px-7 py-3 font-semibold text-white shadow-lg shadow-blue-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
+            >
                 Fale conosco
             </button>
         </section>
