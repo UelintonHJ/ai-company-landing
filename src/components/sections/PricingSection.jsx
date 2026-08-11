@@ -37,6 +37,7 @@ export default function PricingSection() {
                                 ? "bg-zinc-400 text-white"
                                 : "text-zinc-400"
                             }`}
+                            aria-pressed={annualBilling}
                     >
                         Anual
                     </button>
