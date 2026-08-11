@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
 import { useAutoRotate } from "../../hooks/useAutoRotate";
+import { testimonials } from "../../data/landingData";
 
-export default function TestimonialsSection({ testimonials }) {
+export default function TestimonialsSection() {
     const [activeTestimonial, setActiveTestimonial] = useState(0);
 
     useAutoRotate(setActiveTestimonial, testimonials.length, 4500);

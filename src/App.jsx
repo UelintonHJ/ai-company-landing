@@ -3,19 +3,6 @@ import SiteFooter from "./components/layout/SiteFooter";
 import SiteHeader from "./components/layout/SiteHeader";
 import LandingSections from "./components/sections/LandingSections";
 
-import {
-  faqs,
-  features,
-  integrations,
-  pricing,
-  service,
-  showcase,
-  stats,
-  team,
-  testimonials,
-  workflowSteps,
-} from "./data/landingData";
-
 import { useRevealOnScroll } from "./hooks/useRevealOnScroll";
 import { useScrollState } from "./hooks/useScrollState";
 
@@ -34,18 +21,7 @@ function App() {
         <SiteHeader 
           isScrolled={isScrolled} />
 
-        <LandingSections 
-          stats={stats} 
-          workflowSteps={workflowSteps} 
-          services={service} 
-          showcases={showcase} 
-          features={features} 
-          testimonials={testimonials} 
-          integrations={integrations} 
-          pricing={pricing} 
-          team={team} 
-          faqs={faqs} 
-        />
+        <LandingSections />
 
         <SiteFooter />
       </div>

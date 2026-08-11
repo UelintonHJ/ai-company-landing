@@ -1,4 +1,6 @@
-export default function IntegrationsSection({ integrations }) {
+import { integrations } from "../../data/landingData";
+
+export default function IntegrationsSection() {
     return (
         <section
             data-reveal

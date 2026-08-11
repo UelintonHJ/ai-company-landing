@@ -11,41 +11,30 @@ import AboutSection from './AboutSection';
 import FAQSection from './FAQSection';
 import CTASection from './CTASection';
 
-export default function LandingSections({
-    stats,
-    workflowSteps,
-    services,
-    showcases,
-    features,
-    testimonials,
-    integrations,
-    pricing,
-    team,
-    faqs,
-}) {
+export default function LandingSections() {
     return (
         <main className="space-y-24">
-            <HeroSection stats={stats} />
+            <HeroSection />
 
-            <ServicesSection services={services} />
+            <ServicesSection />
 
-            <ShowcaseSection showcases={showcases} />
+            <ShowcaseSection />
 
             <PartnersSection />
 
-            <WorkflowSection workflowSteps={workflowSteps} />
+            <WorkflowSection />
 
-            <FeaturesSection features={features} />
+            <FeaturesSection />
 
-            <TestimonialsSection testimonials={testimonials} />
+            <TestimonialsSection />
 
-            <IntegrationsSection integrations={integrations} />
+            <IntegrationsSection />
 
-            <PricingSection pricing={pricing} />
+            <PricingSection />
 
-            <AboutSection team={team} />
+            <AboutSection />
 
-            <FAQSection faqs={faqs} />
+            <FAQSection />
 
             <CTASection />
         </main>

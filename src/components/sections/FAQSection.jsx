@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { faqs } from "../../data/landingData";
 
-export default function FAQSection({ faqs }) {
+export default function FAQSection() {
     const [openFaq, setOpenFaq] = useState(0);
 
     return (

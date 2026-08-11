@@ -1,4 +1,6 @@
-export default function HeroSection({ stats }) {
+import { stats } from "../../data/landingData";
+
+export default function HeroSection() {
     return (
         <section
             data-reveal

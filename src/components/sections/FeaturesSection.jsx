@@ -1,4 +1,6 @@
-export default function FeaturesSection({ features }) {
+import { features } from "../../data/landingData";
+
+export default function FeaturesSection() {
     return (
         <section id="features" data-reveal className="scroll-mt-28 reveal-up">
             <h2 className="mb-8 text-2xl font-semibold md:text-3xl">

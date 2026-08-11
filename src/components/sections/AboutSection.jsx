@@ -1,4 +1,6 @@
-export default function AboutSection({ team }) {
+import { team } from "../../data/landingData";
+
+export default function AboutSection() {
     return (
         <section
             id="about"

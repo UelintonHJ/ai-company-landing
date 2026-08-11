@@ -1,4 +1,6 @@
-export default function WorkflowSection({ workflowSteps }) {
+import { workflowSteps } from "../../data/landingData";
+
+export default function WorkflowSection() {
     return (
         <section
             data-reveal

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { pricing } from "../../data/landingData";
 
-export default function PricingSection({ pricing }) {
+export default function PricingSection() {
     const [annualBilling, setAnnualBilling] = useState(true);
 
     return (

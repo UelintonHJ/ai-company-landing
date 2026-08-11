@@ -1,8 +1,8 @@
 import { useState } from "react";
-
 import { useAutoRotate } from "../../hooks/useAutoRotate";
+import { showcase as showcases } from "../../data/landingData";
 
-export default function ShowcaseSection({ showcases }) {
+export default function ShowcaseSection() {
     const [activeShowcase, setActiveShowcase] = useState(0);
 
     useAutoRotate(setActiveShowcase, showcases.length, 3600);
