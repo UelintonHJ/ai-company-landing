@@ -25,11 +25,7 @@ export default function LandingSections({
 }) {
     return (
         <main className="space-y-24">
-            <HeroSection 
-                stats={stats}
-                services={services}
-                showcases={showcases}
-            />
+            <HeroSection stats={stats} />
 
             <ServicesSection services={services} />
 
