@@ -44,7 +44,7 @@ export const features = [
     },
 ]
 
-export const service = [
+export const services = [
     {
         icon: FaRobot,
         name: 'API para Assistência Inteligente',
@@ -60,9 +60,9 @@ export const service = [
         name: 'Inteligência Preditiva',
         summary: 'Preveja a demanda, detecte riscos e otimize decisões com modelos de aprendizado de máquina.'
     },
-]
+]   
 
-export const showcase = [
+export const showcases = [
     {
         icon: FaCloud,
         title: 'Centro de Comando',

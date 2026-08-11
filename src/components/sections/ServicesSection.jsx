@@ -1,4 +1,4 @@
-import { service } from "../../data/landingData";
+import { services } from "../../data/landingData";
 
 export default function ServicesSection() {
     return (
@@ -18,7 +18,7 @@ export default function ServicesSection() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
-                {service.map((item) => (
+                {services.map((item) => (
                     <article
                         key={item.name}
                         className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/10"
