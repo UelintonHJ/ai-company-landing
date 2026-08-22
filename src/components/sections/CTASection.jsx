@@ -13,12 +13,12 @@ export default function CTASection() {
                 Junte-se às grandes empresas que usam Synapse para automatizar, prever e crescer mais rápido.
             </p>
 
-            <button
-                type="button" 
-                className="rounded-lg bg-blue-500 px-7 py-3 font-semibold text-white shadow-lg shadow-blue-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
+            <a 
+                href="mailto:ola@examplo.com"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-500 px-7 py-3 font-semibold text-white shadow-lg shadow-blue-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
             >
                 Fale conosco
-            </button>
+            </a>
         </section>
     )
 }

@@ -178,10 +178,12 @@ export default function SiteHeader({ isScrolled }) {
                     <span>Menu</span>
                 </button>
 
-                <button type="button" className={desktopButtonClasses}>
+                <a 
+                    href="mailto:ola@exemplo.com?subject=Agendamento%20de%20demonstra%C3%A7%C3%A3o" 
+                    className={desktopButtonClasses}>
                     <FaEnvelope aria-hidden="true" />
                     Agende uma demonstração
-                </button>
+                </a>
             </header>
 
             <div
@@ -214,14 +216,14 @@ export default function SiteHeader({ isScrolled }) {
                         </a>
                     ))}
 
-                    <button
-                        type="button"
+                    <a
+                        href="mailto:ola@exemplo.com?subject=Agendamento%20de%20demonstra%C3%A7%C3%A3o"
                         onClick={handleCloseMenu}
                         className={mobileButtonClasses}
                     >
                         <FaEnvelope aria-hidden="true" />
                         Agende uma demonstração
-                    </button>
+                    </a>
                 </nav>
             </div>
         </>

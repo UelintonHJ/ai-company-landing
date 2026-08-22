@@ -22,19 +22,19 @@ export default function HeroSection() {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-4">
-                    <button
-                        type="button"
-                        className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white shadow-blue-500/20 transition hover:-translate-y-0.5 hover:bg-blue-400"
+                    <a
+                        href="#pricing"
+                        className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white shadow-blue-500/20 transition hover:-translate-y-0.5 hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                         Comece o Teste Grátis
-                    </button>
+                    </a>
 
-                    <button
-                        type="button"
-                        className="rounded-lg border border-zinc-600 px-6 py-3 font-semibold transition hover:border-blue-400 hover:text-blue-300"
+                    <a
+                        href="#showcase"
+                        className="rounded-lg border border-zinc-600 px-6 py-3 font-semibold transition hover:border-blue-400 hover:text-blue-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                         Ver Plataforma
-                    </button>
+                    </a>
                 </div>
 
                 <div className="mt-8 grid grid-cols-2 gap-2 lg:gap-12 md:grid-cols-4">
