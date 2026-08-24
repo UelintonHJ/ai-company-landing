@@ -1,146 +1,323 @@
 # 🤖 AI Company Landing
 
-Landing Page moderna para uma empresa de Inteligência Artificial desenvolvida com **React.js**, **TypeScript** e **Tailwind CSS**.
+A modern, responsive landing page for a fictional AI company. Built from scratch with React, Vite, and Tailwind CSS, the project focuses on component-driven UI, responsive layouts, interactive sections, accessibility, and polished visual design.
 
-Este projeto faz parte dos meus estudos em desenvolvimento Frontend, com foco na criação de interfaces modernas, componentizadas e responsivas. O objetivo é desenvolver uma landing page de alta qualidade para uma empresa fictícia de tecnologia especializada em soluções de IA, aplicando boas práticas de arquitetura, UI Engineering e Design de Interfaces.
+The landing page presents AI products and services through a complete marketing experience including company metrics, workflows, integrations, testimonials, pricing, FAQ, and conversion-focused CTAs.
 
----
+## ✨ Features
 
-## 📖 Sobre o projeto
+- **Hero section**: Company introduction, primary CTAs, and static business metrics
+- **Services**: AI solutions presented through reusable service cards
+- **Product showcase**: Interactive presentation of IA platform capabilities
+- **Partners**: Visual presentation of fictional partner companies
+- **Workflow**: Three-step overview of the implementation process
+- **Features**: AI automation, analytics, and enterprise security highlights
+- **Testimonials**: Customer testimonials with interactive navigation
+- **Integrations**: Visual integrations grid including Slack, HubSpot, Salesforce, AWS, Azure, Stripe, and Snowflake
+- **Pricing**: Monthly and annual pricing options across three plans
+- **About & team**: Company positioning and team presentation
+- **FAQ**: Expandable frequently asked questions
+- **Responsive navigation**: Desktop and mobile navigation experience
+- **Scroll animations**: Reveal animations triggered through the Intersection Observer API
+- **Scroll-aware header**: Header behavior based on the current scroll position
+- **Back to top**: Floating navigation control displayed after scrolling
+- **Responsive UI**: Layouts optimized for mobile, tablet, and desktop
+- **Accessibility considerations**: Semantic HTML, keyboard interaction, focus management, and reduced-motion support
 
-A proposta deste projeto é simular uma landing page profissional de uma startup de Inteligência Artificial, apresentando seus serviços de forma moderna, limpa e intuitiva.
+## 🛠️ Tech Stack
 
-Durante o desenvolvimento, busco aplicar conceitos utilizados em produtos reais, priorizando:
+| Technology                                                | Purpose                                      |
+| --------------------------------------------------------- | -------------------------------------------- |
+| [React 19](https://react.dev/)                            | UI components and interactive state          |
+| [Vite 8](https://vite.dev/)                               | Development server and production build      |
+| [Tailwind CSS 4](https://tailwindcss.com/)                | Utility-first styling and responsive layouts |
+| [React Icons](https://react-icons.github.io/react-icons/) | Interface and integration icons              |
+| [ESLint](https://eslint.org/)                             | JavaScript and React code linting            |
 
-- Arquitetura escalável
-- Componentização
-- Responsividade
-- Performance
-- Acessibilidade
-- Boas práticas de desenvolvimento
-- Design moderno inspirado em empresas como Vercel, Stripe e OpenAI
+The project currently uses **JavaScript and JSX**. TypeScript is not part of the current implementation.
 
----
-
-## 🚀 O que estou aprendendo
-
-Durante este projeto estou aprofundando conhecimentos em:
-
-- 📱 Desenvolvimento de layouts totalmente responsivos utilizando Tailwind CSS.
-- ⚛️ Criação de componentes reutilizáveis com React para facilitar manutenção e escalabilidade.
-- 📊 Construção de dashboards e métricas visuais para apresentar dados de IA em tempo real.
-- 🎨 Aplicação de princípios modernos de UI/UX para criar interfaces intuitivas e agradáveis.
-- ✨ Desenvolvimento de interações suaves e animações para melhorar a experiência do usuário.
-- 🏗️ Organização de projetos Frontend utilizando boas práticas de arquitetura.
-
----
-
-## ✨ Principais recursos
-
-- 🤖 Hero Section moderna
-- 📈 Estatísticas e métricas em tempo real
-- 🧠 Seção de operações de Inteligência Artificial
-- 🖥️ Pré-visualização interativa da plataforma
-- 💳 Planos de preços
-- ⭐ Depoimentos de clientes
-- ❓ FAQ
-- 🔒 Destaque para segurança empresarial
-- ☁️ Integrações com plataformas como AWS e Microsoft Azure
-- 📱 Layout totalmente responsivo
-- ⚡ Interface otimizada para performance
-
----
-
-## 🛠️ Tecnologias utilizadas
-
-- React.js
-- Tailwind CSS
-- Vite
-- ESLint
-- Prettier
-
----
-
-## 📂 Estrutura do projeto
+## 📁 Project Structure
 
 ```text
-src
-│   App.jsx
-│   index.css
-│   main.jsx
-│   
-├───assets
-│       hero.png
-│       react.svg
-│       vite.svg
-│       
-├───components
-│   └───common
-│       │   BackToTopButton.jsx
-│       │   
-│       └───layout
-│               SiteFooter.jsx
-│               SiteHeader.jsx
-│               
-└───sections
-        LandingSections.jsx
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── hero.png
+│   │
+│   ├── components/
+│   │   ├── common/
+│   │   │   └── BackToTopButton.jsx
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── SiteFooter.jsx
+│   │   │   └── SiteHeader.jsx
+│   │   │
+│   │   └── sections/
+│   │       ├── AboutSection.jsx
+│   │       ├── CTASection.jsx
+│   │       ├── FAQSection.jsx
+│   │       ├── FeaturesSection.jsx
+│   │       ├── HeroSection.jsx
+│   │       ├── IntegrationsSection.jsx
+│   │       ├── LandingSections.jsx
+│   │       ├── PartnersSection.jsx
+│   │       ├── PricingSection.jsx
+│   │       ├── ServicesSection.jsx
+│   │       ├── ShowcaseSection.jsx
+│   │       ├── TestimonialsSection.jsx
+│   │       └── WorkflowSection.jsx
+│   │
+│   ├── data/
+│   │   └── landingData.js
+│   │
+│   ├── hooks/
+│   │   ├── useAutoRotate.js
+│   │   ├── useRevealOnScroll.js
+│   │   └── useScrollState.js
+│   │
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── eslint.config.js
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
----
+### Architecture overview
 
-## 🎯 Objetivos do projeto
+The project follows a component-based React structure:
 
-Este projeto tem como objetivo praticar conceitos importantes do desenvolvimento Frontend moderno, como:
+- **components/layout**: Global layout components such as the header and footer.
+- **components/sections**: Individual lading page sections.
+- **components/common**: Reusable UI elements shared across the page.
+- **data**: Centralized static content used by the sections.
+- **hooks**: Reusable behavior such as scroll state, reveal animations, and automatic rotation.
+- **assets**: Static visual assets used by the application.
 
-- Componentização
-- Design System
-- Responsividade
-- Arquitetura de componentes
-- UI Engineering
-- Clean Code
-- Performance
-- Organização de projetos React
+The page composition is centralized in ``LandingSections.jsx``, keeping ``App.jsx`` focused on the application shell and global behavior.
 
-Além disso, este projeto será utilizado como parte do meu portfólio para demonstrar minhas habilidades em desenvolvimento Frontend.
+## 📊 Content & Data
 
----
+The landing page content is centralized in:
 
-## 🚀 Como executar o projeto
+``src/data/landingData.js``
 
-Clone o repositório:
+This file contains the static data used throughout the page, including:
+
+- company statistics;
+- partners;
+- features;
+- services;
+- product showcases;
+- workflow steps;
+- integrations;
+- testimonials;
+- pricing plans;
+- FAQs;
+- team members;
+
+For example, the Hero statistics are defined as static data:
+
+```js
+export const stats = [
+    { label: 'Modelos Implantados', value: '+280' },
+    { label: 'Ganhos Médios', value: '127%' },
+    { label: 'Uptime', value: '99.99%' },
+    { label: 'Clientes Globais', value: '42' },
+]
+```
+
+These values are presentation content and are **not connected to a real-time backend or analytics service**.
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Node.js 18 or later
+- npm
+
+### Installation
+
+Clone the  repository:
 
 ```bash
 git clone https://github.com/UelintonHJ/ai-company-landing.git
 ```
 
-Acesse a pasta do projeto:
+Navigate to the project:
 
 ```bash
 cd ai-company-landing
 ```
 
-Instale as dependências:
+Install the dependencies:
 
 ```bash
 npm install
 ```
 
-Inicie o servidor de desenvolvimento:
+### Development
+
+Start the Vite development server:
 
 ```bash
 npm run dev
 ```
 
----
+Open the local URL shown in the terminal.
 
-## 🌟 Sobre mim
+### Production build
 
-Sou estudante de **Análise e Desenvolvimento de Sistemas** e desenvolvedor focado na construção de projetos que simulam desafios do mercado de tecnologia.
+Create an optimized production build:
 
-Atualmente estudo tecnologias como React, TypeScript, Tailwind CSS e desenvolvimento Full Stack, sempre buscando aplicar boas práticas de engenharia de software, arquitetura, UI/UX e desenvolvimento de aplicações modernas para fortalecer meu portfólio.
+```bash
+npm run build
+```
 
----
+The generated files are placed in:
 
-## 📄 Licença
+```text
+dist/
+```
 
-Este projeto foi desenvolvido para fins de estudo e portfólio.
+### Preview production build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Lint
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+## 🎨 Customization
+
+Most of the landing page's content can be modified without changing component logic.
+
+### Page content
+
+Update:
+
+```text
+src/data/landingData.js
+```
+
+This is the main source for:
+
+- statistics;
+- services;
+- features;
+- integrations;
+- testimonials;
+- pricing;
+- FAQs;
+- team members;
+- workflow conten.
+
+### Global styling
+
+Global styles and animations definitions are located in:
+
+```text
+src/index.css
+```
+
+### Header & navigation
+
+The site header can be customized in:
+
+```text
+src/components/layout/SiteHeader.jsx
+```
+
+### Footer
+
+Footer content and links are defined in:
+
+```text
+src/components/layout/SiteFooter.jsx
+```
+
+## 🧩 Design & Engineering Focus
+
+This project was developed as a Frontend engineering and UI practice project, with emphasis on:
+
+- component composition;
+- separation of content and presentation;
+- responsive design;
+- semantic HTML;
+- accessibility;
+- reusable React hooks;
+- maintainable CSS;
+- interaction design;
+- visual hierarchy;
+- responsive typography and spacing;
+- progressive enhancement;
+- user experience;
+- code organization.
+
+The visual direction takes inspiration from modern technology companies and products such as Vercel, Stripe, and other contemporary SaaS interfaces.
+
+## 🚀 Deployment
+
+The project is a static Vite application.
+
+After running:
+
+```bash
+npm run build
+```
+
+the generated ``dist/`` directory can be deployed to a static hosting platform such as:
+
+* [Vercel](https://vercel.com/)
+* [Netlify](https://www.netlify.com/)
+* [Cloudflare Pages](https://pages.cloudflare.com/)
+* [GitHub Pages](https://pages.github.com/)
+
+No backend or database is required to run the current version of the landing page.
+
+## 📌 Project Status
+
+This project is currently focused on the Frontend experience of a fictional AI company.
+
+The current implementation does not include:
+
+- a backend API;
+- database persistence;
+- authentication;
+- real-time data;
+- real analytics;
+- a CMS;
+- TypeScript;
+- a production payment system.
+
+The content presented by the landing page is static and intended to demonstrate UI engineering, React componentization, responsive design, and frontend development practices.
+
+## 🎯 Purpose
+
+This project is part of my Frontend development portfolio and is intended to demonstrate my ability to build modern interfaces from scratch using React and Tailwind CSS.
+
+The project also serves as a practical environment for studying:
+
+- React architecture;
+- UI Engineering;
+- accessibility;
+- responsive design;
+- frontend performance;
+- component design;
+- maintainable project structure;
+- modern development workflows.
+
+## 📄 License
+
+This project was developed for study and portfolio purposes.
