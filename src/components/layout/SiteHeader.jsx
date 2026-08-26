@@ -89,7 +89,7 @@ export default function SiteHeader({ isScrolled }) {
         }
 
         if (
-            event.shiftKey && 
+            event.shiftKey &&
             document.activeElement === firstElement
         ) {
             event.preventDefault();
@@ -100,6 +100,12 @@ export default function SiteHeader({ isScrolled }) {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 768 && menuOpen) {
+                const menu = mobileMenuRef.current;
+
+                if (menu?.contains(document.activeElement)) {
+                    document.activeElement?.blur();
+                }
+
                 setMenuOpen(false);
             }
         };
@@ -178,8 +184,8 @@ export default function SiteHeader({ isScrolled }) {
                     <span>Menu</span>
                 </button>
 
-                <a 
-                    href="mailto:ola@exemplo.com?subject=Agendamento%20de%20demonstra%C3%A7%C3%A3o" 
+                <a
+                    href="mailto:ola@exemplo.com?subject=Agendamento%20de%20demonstra%C3%A7%C3%A3o"
                     className={desktopButtonClasses}>
                     <FaEnvelope aria-hidden="true" />
                     Agende uma demonstração
@@ -190,6 +196,7 @@ export default function SiteHeader({ isScrolled }) {
                 ref={mobileMenuRef}
                 id="mobile-menu"
                 aria-hidden={!menuOpen}
+                inert={!menuOpen}
                 onKeyDown={handleMenuKeyDown}
                 className={`fixed left-1/2 top-20 z-40 w-[min(95%,72rem)] -translate-x-1/2 rounded-2xl border border-zinc-800 bg-zinc-900/95 p-4 backdrop-blur-xl shadow-xl transition-all duration-300 md:hidden ${menuOpen
                     ? "translate-y-0 opacity-100"
@@ -206,7 +213,7 @@ export default function SiteHeader({ isScrolled }) {
                             ref={
                                 index === 0
                                     ? firstMenuLinkRef
-                                    : undefined   
+                                    : undefined
                             }
                             href={href}
                             onClick={handleCloseMenu}
