@@ -186,7 +186,8 @@ export default function SiteHeader({ isScrolled }) {
 
                 <a
                     href="mailto:ola@exemplo.com?subject=Agendamento%20de%20demonstra%C3%A7%C3%A3o"
-                    className={desktopButtonClasses}>
+                    className={desktopButtonClasses}
+                >
                     <FaEnvelope aria-hidden="true" />
                     Agende uma demonstração
                 </a>

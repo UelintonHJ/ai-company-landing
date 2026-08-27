@@ -91,7 +91,9 @@ export default function PricingSection() {
                                 ))}
                             </ul>
 
-                            <a href={contactHref} className="mt-auto inline-flex w-full items-center justify-center rounded-lg border border-zinc-600 px-4 py-2 font-medium transition hover:border-blue-400 hover:text-blue-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
+                            <a 
+                                href={contactHref} 
+                                className="mt-auto block w-full rounded-lg border border-zinc-600 px-4 py-2 text-center font-medium transition hover:border-blue-400 hover:text-blue-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
                                 Comece
                             </a>
                         </article>
