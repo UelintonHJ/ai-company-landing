@@ -13,9 +13,20 @@ export default defineConfig([
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
     ],
+
     languageOptions: {
       globals: globals.browser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
-])
+
+  {
+    files: ["playwright.config.js", "tests/**/*.js"],
+
+    extends: [js.configs.recommended],
+
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+]);
