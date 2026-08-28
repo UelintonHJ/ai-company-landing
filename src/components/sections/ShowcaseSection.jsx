@@ -32,7 +32,7 @@ export default function ShowcaseSection() {
                             key={item.title}
                             type="button"
                             onClick={() => setActiveShowcase(index)}
-                            className={`group flex h-16 shrink-0 items-center justify-center rounded-xl border p-4 transition-all duration-300 md:gap-2 lg:min-h-28 lg:w-full lg:justify-start lg:gap-4 ${
+                            className={`group flex h-16 shrink-0 items-center justify-center rounded-xl border p-4 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 md:gap-2 lg:min-h-28 lg:w-full lg:justify-start lg:gap-4 ${
                                 activeShowcase === index
                                     ? "border-blue-400 bg-blue-500/10"
                                     : "border-zinc-800 bg-zinc-900/40 hover:border-blue-400/40"

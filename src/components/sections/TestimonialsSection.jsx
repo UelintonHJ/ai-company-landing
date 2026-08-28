@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
                                 (prev) => (prev + 1) % testimonials.length
                             )
                         }
-                        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400"
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 text-sm transition hover:border-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
                         aria-label="Próximo depoimento"
                     >
                         <FaArrowRight aria-hidden="true" />
@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
                         type="button"
                         key={item.author}
                         onClick={() => setActiveTestimonial(index)}
-                        className={`h-2.5 mr-1 rounded-full transition-all ${
+                        className={`mr-1 h-2.5 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 ${
                             activeTestimonial === index
                                 ? "w-8 bg-blue-300"
                                 : "w-2.5 bg-zinc-600"
