@@ -37,17 +37,17 @@ export default function HeroSection() {
                     </a>
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-2 md:grid-cols-4 lg:gap-12">
+                <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
                     {stats.map((item) => (
                         <div
                             key={item.label}
-                            className="flex min-w-0 flex-col items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40"
+                            className="flex min-w-0 w-full flex-col items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 sm:p-5"
                         >
-                            <p className="text-3xl font-bold tracking-tight text-blue-300">
+                            <p className="text-2xl font-bold tracking-tight text-blue-300 sm:text-3xl">
                                 {item.value}
                             </p>
 
-                            <p className="mt-3 max-w-[14ch] text-center text-sm font-semibold uppercase leading-relaxed tracking-wide text-zinc-400">
+                            <p className="mt-3 max-w-[16ch] text-center text-sm font-semibold uppercase leading-relaxed tracking-wide text-zinc-400">
                                 {item.label}
                             </p>
                         </div>
