@@ -32,44 +32,62 @@ export default function ShowcaseSection() {
                             key={item.title}
                             type="button"
                             onClick={() => setActiveShowcase(index)}
-                            className={`group flex h-16 shrink-0 items-center justify-center rounded-xl border p-4 transition-all duration-300 md:gap-2 lg:min-h-28 lg:w-full lg:justify-start lg:gap-4 ${
+                            className={`group flex h-16 shrink-0 items-center justify-center rounded-xl border p-4 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 md:gap-2 lg:min-h-28 lg:w-full lg:justify-start lg:gap-4 ${
                                 activeShowcase === index
                                     ? "border-blue-400 bg-blue-500/10"
                                     : "border-zinc-800 bg-zinc-900/40 hover:border-blue-400/40"
-                                }`}
+                            }`}
                         >
                             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-300">
-                                <item.icon className="text-xl" aria-hidden="true" />
+                                <item.icon
+                                    className="text-xl"
+                                    aria-hidden="true"
+                                />
                             </div>
 
-                            <h3 className="hidden font-semibold md:text-sm md:block lg:text-base">
+                            <h3 className="hidden font-semibold md:block md:text-sm lg:text-base">
                                 {item.title}
                             </h3>
                         </button>
                     ))}
                 </div>
 
-                <article className="flex min-h-100 md:min-h-80 lg:h-auto flex-col justify-between overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-                    <div>
-                        <div className="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-300">
-                            <showcase.icon className="text-3xl" aria-hidden="true" />
-                        </div>
+                <article className="grid grid-rows-[1fr_8rem] rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 lg:min-h-80 lg:grid-rows-[1fr_auto] lg:p-6">
+                    <div className="grid">
+                        {showcases.map((item, index) => (
+                            <div
+                                key={item.title}
+                                className={`col-start-1 row-start-1 ${
+                                    activeShowcase === index
+                                        ? "visible"
+                                        : "invisible"
+                                }`}
+                                aria-hidden={activeShowcase !== index}
+                            >
+                                <div className="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-300">
+                                    <item.icon
+                                        className="text-3xl"
+                                        aria-hidden="true"
+                                    />
+                                </div>
 
-                        <h3 className="mb-3 text-2xl font-bold">
-                            {showcase.title}
-                        </h3>
+                                <h3 className="mb-3 text-2xl font-bold">
+                                    {item.title}
+                                </h3>
 
-                        <p className="max-w-3xl leading-relaxed text-zinc-300">
-                            {showcase.description}
-                        </p>
+                                <p className="max-w-3xl leading-relaxed text-zinc-300">
+                                    {item.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="mt-6 rounded-xl border border-blue-400/20 bg-blue-500/10 p-4">
+                    <div className="mt-6 flex min-h-0 flex-col justify-center rounded-xl border border-blue-400/20 bg-blue-500/10 p-4">
                         <p className="text-sm uppercase tracking-widest text-blue-300">
                             Resultado
                         </p>
 
-                        <p className="mt-1 text-2xl font-bold text-white">
+                        <p className="mt-1 text-xl font-bold leading-tight text-white sm:text-2xl">
                             {showcase.metric}
                         </p>
                     </div>
