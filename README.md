@@ -1,4 +1,4 @@
-# 🤖 AI Company Landing
+# 🤖 [AI Company Landing](https://ai-company-landing-six.vercel.app/)
 
 A modern, responsive landing page for a fictional AI company. Built from scratch with React, Vite, and Tailwind CSS, the project focuses on component-driven UI, responsive layouts, interactive sections, accessibility, and polished visual design.
 
@@ -269,22 +269,39 @@ The visual direction takes inspiration from modern technology companies and prod
 
 ## 🚀 Deployment
 
-The project is a static Vite application.
+The application is publicly deployed on Vercel:
 
-After running:
+**Production**: https://ai-company-landing-six.vercel.app/
 
-```bash
+The project is a static Vite application and does not require a backend or database to run.
+
+### Deployment pipeline
+
+The project uses Vercel's Git integration for continuous deployment:
+
+GitHub -> Pull Request -> Preview Deployment -> Merge into main -> Production Deployment
+
+Every production deployment is generated from the main branch after a successful Vite production build.
+
+### Production build
+
+```
 npm run build
 ```
 
-the generated ``dist/`` directory can be deployed to a static hosting platform such as:
+The generated production assets are placed in:
 
-* [Vercel](https://vercel.com/)
-* [Netlify](https://www.netlify.com/)
-* [Cloudflare Pages](https://pages.cloudflare.com/)
-* [GitHub Pages](https://pages.github.com/)
+```
+dist/
+```
 
-No backend or database is required to run the current version of the landing page.
+### Local production preview
+
+```
+npm run preview
+```
+
+> vite preview is intended for locally previewing the production build and is not used as the production server.
 
 ## 📌 Project Status
 
