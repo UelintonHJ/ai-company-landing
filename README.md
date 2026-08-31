@@ -1,4 +1,4 @@
-# 🤖 (AI Company Landing[https://ai-company-landing-six.vercel.app/])
+# 🤖 [AI Company Landing(https://ai-company-landing-six.vercel.app/])
 
 A modern, responsive landing page for a fictional AI company. Built from scratch with React, Vite, and Tailwind CSS, the project focuses on component-driven UI, responsive layouts, interactive sections, accessibility, and polished visual design.
 
