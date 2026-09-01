@@ -3,6 +3,7 @@ import { stats } from "../../data/landingData";
 export default function HeroSection() {
     return (
         <section
+            id="hero"
             data-reveal
             className="reveal-up grid gap-12 lg:grid-cols-2 lg:items-center"
         >

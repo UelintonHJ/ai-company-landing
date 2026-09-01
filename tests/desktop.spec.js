@@ -32,6 +32,43 @@ test.describe("Desktop landing page", () => {
         expect(documentWidth).toBeLessThanOrEqual(viewportWidth);
     });
 
+    test("links principais devem apontar para seções internas", async ({
+        page,
+    }) => {
+        await page.goto("/");
+
+        const navigation = page.getByRole("navigation", {
+            name: "Navegação principal",
+        });
+
+        const expectLinks = [
+            {
+                name: "Recursos",
+                target: "#services",
+            },
+            {
+                name: "Preços",
+                target: "#pricing",
+            },
+            {
+                name: "Sobre",
+                target: "#about",
+            },
+            {
+                name: "FAQ",
+                target: "#faq",
+            },
+        ];
+
+        for (const link of expectLinks) {
+            await expect(
+                navigation.getByRole("link", {
+                    name: link.name,
+                }),
+            ).toHaveAttribute("href", link.target);
+        }
+    });
+
     test("deve exibir a navegação desktop", async ({ page }) => {
         const navigation = page.getByRole("navigation", {
             name: "Navegação principal",
@@ -189,5 +226,30 @@ test.describe("Desktop landing page", () => {
         });
 
         await expect(backToTopButton).toBeVisible();
+    });
+
+    test("deve voltar ao topo quando acionado", async ({ page }) => {
+        await page.goto("/");
+
+        await page.evaluate(() => {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "instant",
+            });
+        });
+
+        const button = page.getByRole("button", {
+            name: /voltar ao topo/i,
+        });
+
+        await expect(button).toBeVisible();
+
+        await button.click();
+
+        await expect
+            .poll(() =>
+                page.evaluate(() => window.scrollY),
+        )
+        .toBeLessThan(50);
     });
 });
