@@ -3,6 +3,7 @@ import { stats } from "../../data/landingData";
 export default function HeroSection() {
     return (
         <section
+            id="hero"
             data-reveal
             className="reveal-up grid gap-12 lg:grid-cols-2 lg:items-center"
         >
@@ -24,7 +25,7 @@ export default function HeroSection() {
                 <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
                     <a
                         href="mailto:ola@exemplo.com?subject=Teste%20Gr%C3%A1tis%20Synapse%20IA"
-                        className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white shadow-blue-500/20 transition hover:-translate-y-0.5 hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                        className="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                         Comece o Teste Grátis
                     </a>

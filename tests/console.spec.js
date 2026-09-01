@@ -1,9 +1,10 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Browser console", () => {
-    test("não deve apresentar erros no console ou runtime", async ({ page }) => {
+    test("não deve apresentar erros no console, runtime ou rede", async ({ page }) => {
         const consoleErrors = [];
         const pageErrors = [];
+        const requestFailures = [];
 
         page.on("console", (message) => {
             if (message.type() === "error") {
@@ -15,6 +16,13 @@ test.describe("Browser console", () => {
             pageErrors.push(error.message);
         });
 
+        page.on("requestfailed", (request) => {
+            requestFailures.push({
+                url: request.url(),
+                failure: request.failure()?.errorText,
+            });
+        });
+
         await page.goto("/");
 
         await expect(
@@ -23,7 +31,17 @@ test.describe("Browser console", () => {
             })
         ).toBeVisible();
 
-        await page.getByRole("link", { name: "Recursos "}).click();
+        await page.locator("#services").scrollIntoViewIfNeeded();
+
+        await page.locator("#pricing").scrollIntoViewIfNeeded();
+
+        await page.locator("#faq").scrollIntoViewIfNeeded();
+
+        await expect(
+            page.locator("footer"),
+        ).toBeVisible();
+
+        await page.getByRole("link", { name: "Recursos " }).click();
         await expect(page.locator("#services")).toBeInViewport();
 
         await page.getByRole("link", { name: "Preços" }).click();
@@ -62,6 +80,11 @@ test.describe("Browser console", () => {
         expect(
             pageErrors,
             `Foram encontrados erros de runtime:\n${pageErrors.join("\n")}`
+        ).toHaveLength(0);
+
+        expect(
+            requestFailures,
+            `Network failures:\n${JSON.stringify(requestFailures, null, 2)}`,
         ).toHaveLength(0);
     });
 });
